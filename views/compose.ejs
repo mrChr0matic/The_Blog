@@ -1,0 +1,22 @@
+<%- include("template/header.ejs")%>
+<div class="compose-div">
+    <form action="/posts" method="post">
+        <div>
+            <h2>Title</h2>
+            <hr>
+            <input type="text" name="title" id="">
+        </div>
+        <hr>
+        <div>
+            <h2>Content</h2>
+            <hr>
+            <textarea name="content" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="post-div">
+            <button class="post-button" type="submit">Post</button>
+        </div>
+    </form>
+</div>
+
+
+<%- include("template/footer.ejs")%>       

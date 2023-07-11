@@ -1,0 +1,570 @@
+body{
+    min-height: 100vh;
+    background: url(images/image1.jpg);
+    background-attachment:fixed ;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    text-align: center;
+    font-size: 100px;
+}
+h2{
+    text-align: center
+}
+a{
+    margin: auto;
+    text-decoration: none;
+    color: #000;
+}
+ul{
+    list-style: none;
+}
+#myVideo{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+/* Navbar CSS */
+
+.navbar{
+    z-index: 1;
+    background-color: aliceblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-brand{
+    margin-left: 100px;
+}
+
+.navbar-paths{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.navbar-items{
+    position: relative;
+}
+.navbar-items::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #000;
+    bottom: -6px;
+    left: 0;
+    transform-origin:right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navbar-items:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.logout-button{
+    background: black;
+    border-radius: 50px; 
+    color: aliceblue; 
+    height: 30px;
+    cursor: pointer; 
+    margin-top: 18px;
+    margin-right: 40px;
+}
+/* content part */
+
+.heading{
+    min-height: 100vh;
+    position: relative;
+    
+}
+
+.heading-content{
+    padding: 0%;
+    position: relative;
+    top: 200px;
+    width: 100%;
+}
+
+.blog-heading{
+    width: 50%;
+    margin-bottom:0 ;
+    padding: 3%;
+    background-color: aliceblue;
+    margin: auto;
+    border-radius: 50px;
+}
+
+.blog-animation{
+    padding: 0;
+    margin: auto;   
+    letter-spacing: 10px;
+    font-size: 5rem;
+    width:fit-content;
+    border-right: 5px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: visibility  1.8s steps(8),
+                cursor 0.4s  step-end infinite alternate;
+                
+}
+
+@keyframes cursor{
+    50%{
+        border-color: transparent;
+    }
+}
+
+@keyframes visibility{
+    from{width: 0;}
+    to{width: 67%;}
+}
+
+.blog-description{
+    width: 30%;
+    margin: auto;
+    padding: 1%;
+    background-color: aliceblue;
+    border-radius: 0 0 30px 30px;
+    position: relative;
+    overflow: hidden;
+}
+.posts{
+    width: 80%;
+    margin: auto;
+    background: #fff;
+    margin-bottom: 25px;
+}
+
+.post-title{
+    margin: 0;
+    padding: 2%;
+    z-index: 2;
+}
+
+.post-content{
+    position: relative;
+    margin: 0;
+    padding: 2%;
+    z-index: 2;
+}
+
+.recent{
+    display: flex;
+    justify-content: space-around;
+}
+
+.latest-posts{
+    position: relative;
+    color: #fff;
+    text-shadow: 0 0 10px #00b3ff,0 0 20px #00b3ff,0 0 30px #00b3ff,0 0 40px #00b3ff;
+}
+.latest-posts::before{
+    content: "Latest Posts";
+    width: inherit;
+    position: absolute;
+    top:17px;
+    color: black;
+    opacity: 0.5;
+    z-index: -1;
+}
+/* button style */
+.btn{
+    border: none;
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 1.25rem;
+    background: #000;
+    color: #fff;
+    border-radius: 30px;
+    transition: tranform ease;
+    position: relative;
+}
+
+.btn a{
+    color: #fff;
+}
+.btn::after,.btn::before{
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background: #000;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 1s ease;
+}
+
+.btn:hover{
+    transition: 1s;
+    transform: translate(-12px,-12px);
+}
+
+.btn:hover::after{
+    transition: 1s;
+    opacity: 0.4;
+    transform: translate(6px,6px);
+} 
+
+.btn:hover::before{
+    transition: 1s;
+    transform: translate(12px,12px);
+}
+
+.button{
+    text-align: center;
+}
+
+
+/* security page */
+.security-box{
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height :440px;
+    position: relative;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,00.5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.security-div{
+    width: 100%;
+    padding: 40px;
+}
+.security-div h2{
+    font-size: 2rem;
+}
+
+.security-box::before{
+    content:'';
+    position: absolute;
+    left: -150px;
+    top: -50px;
+    width: 700px;
+    min-height: 700px;
+    background: linear-gradient(#aa4b6b,#6b6b83,#3b8d99);
+    animation: animate 4s linear infinite ;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.security-input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid; 
+    margin: 30px 0;
+}
+
+.security-input label{
+    position: absolute;
+    top:50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    transition: 0.5s;
+}
+
+.security-input input{
+    width: 100%;
+    height:100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+}
+
+.security-input input:focus~label,.security-input input:valid~label{
+    top: -5px;
+}
+
+.security-button-div{
+    position: relative;
+}
+
+.security-button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    border: none;
+    height: 40px;
+    width:40%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.security-button:after,.security-button::before{
+    border:3px solid #000;
+    content: '';
+    position: absolute;
+    height: 40px;
+    width:40%;
+    border-radius: 20px;
+    left:95px;
+    bottom:0;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+
+.security-button:hover::after{
+    transform: translate(5px,5px);
+}
+
+.security-button:hover::before{
+    transform: translate(-5px,-5px);
+}
+
+.create-account{
+    color: aliceblue; 
+    text-decoration: underline; 
+    margin-right: 0;
+}
+/* compose */
+.compose-div{
+    margin-top: 200px;
+    margin-bottom: 0px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,00.5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    border-radius: 30px;
+    text-align: center;
+    width: 80%;
+    display: block;
+    margin:200px auto 0 auto ;
+    overflow-y: hidden;
+    padding-bottom: 25px;
+}
+
+.compose-div input{
+    width: 98%;
+    height: 30px;
+    font-size: 1rem;
+}
+
+.compose-div textarea{
+    width: 98%;
+    border-radius: 0 0px 30px 30px;
+    font-size: 1rem;
+}
+
+.post-div{
+    margin-top: 30px;
+    text-align: center;
+    height:40px;    
+}
+
+.post-button{
+    background: none;
+    width: 10%;
+    height: inherit;
+    border:none;
+    position: relative;
+    font-size: 1rem;
+    transition: 0.5s;
+    color: aliceblue;
+}
+
+.post-button::after,.post-button::before{
+    content: "";
+    border: aliceblue solid;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    top: 0;
+    transition: transform 0.5s ease;
+}
+
+.post-button:hover{
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.post-button:hover::after{
+    transform: scale(1.1) rotate(180deg);
+    border-radius: 20px;
+    box-shadow: 0 0 32px  aliceblue;
+}
+.post-button:hover::before{
+    transform: scale(0.5) rotate(-180deg) ;
+    box-shadow: 0 0 32 ox aliceblue
+}
+
+/* all section */
+.all-div{
+    display: block;
+    margin-top: 100px;
+}
+
+.all-item{
+    width:90%;
+    margin: auto;
+    padding: 2%;
+    margin-bottom: 10px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,00.5);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    border-radius: 30px;
+}
+
+.all-item h3{
+    margin: 0;
+}
+
+.all-options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fonts{
+    color: #fff;
+}
+
+.delete-button,.edit-button{
+    background: none;
+    border: none;
+}
+
+.delete-button:hover,.edit-button:hover{
+    cursor: pointer;
+}
+
+.options-div{
+    display: flex;
+    width: 5%;
+    justify-content: space-between;
+}
+
+/* profile */
+.profile-div{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.profile-items{
+    color: aliceblue;
+    display: flex;
+}
+.profile-options{
+    height: 100px;
+    line-height: 200px;
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    
+}
+
+.for-animations{
+    transition: 1s ease-in-out;
+}
+.for-animations:hover{
+    transform: scale(0.8);
+}
+
+.po1{
+    border-radius: 500px 0 0 0;
+    margin: 0 2px 2px 0; 
+    transition: transform 1s ease-in-out;  
+}
+.po2{
+    border-radius: 0 500px 0 0;
+    margin: 0 0 2px 2px; 
+    transition: transform 1s ease-in-out;     
+}
+.po3{
+    border-radius: 0 0 0 500px ;
+    margin: 2px 2px 0 0;  
+    transition: transform 1s ease-in-out;   
+}
+.po4{
+    border-radius: 0 0 500px 0;
+    margin: 2px 0 2px 0;   
+    transition: transform 1s ease-in-out;  
+}
+
+.po1:hover{
+    transform: scale(1.5) translate(-20px,-20px);
+    box-shadow: 0 0 32px 0 aliceblue;
+}
+.po2:hover{
+    transform: scale(1.5) translate(20px,-20px);
+    box-shadow: 0 0 32px 0 aliceblue;
+}
+.po3:hover{
+    transform: scale(1.5) translate(-20px,20px);
+    box-shadow: 0 0 32px 0 aliceblue;
+}
+.po4:hover{
+    transform: scale(1.5) translate(20px,20px);
+    box-shadow: 0 0 32px 0 aliceblue;
+}
+
+.profile-buttons{
+    background: none;
+    color: aliceblue;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+@media(max-width:768px){
+    .blog-heading{
+        width: 80%;
+        margin: none;
+    }
+    .blog-description{
+        width: 60%;
+    }
+
+    .security-box{
+        width: 80%;
+        height: 80%;
+        align-items: center;
+    }
+    
+    .security-button::before,.security-button::after{
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+    #myVideo{
+        display: none;
+    }
+}

@@ -1,0 +1,21 @@
+<%- include("template/header.ejs")-%>
+
+<div class="compose-div">
+    <form action="/updated" method="post">
+        <div>
+            <h2>Title</h2>
+            <hr>
+            <input type="text" name="editTitle" value="<%=editTitle%>">
+        </div>
+        <hr>
+        <div>
+            <h2>Content</h2>
+            <hr>
+            <textarea cols="30" name="editContent" rows="10"><%=editContent%></textarea>
+        </div>
+        <div class="post-div">
+            <button class="post-button" type="submit">Edit</button>
+        </div>
+    </form>
+</div>
+<%- include("template/footer.ejs")-%>

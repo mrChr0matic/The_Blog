@@ -1,0 +1,23 @@
+<%- include("template/header.ejs") %>
+
+<section class="heading">
+    <div class="heading-content">
+        <h1 class="blog-heading"><p class="blog-animation">The Blog</p></h1>
+        <h2 class="blog-description">Once upon a time.....</h2>
+    </div>
+</section>
+
+<h1  class="latest-posts">Latest Posts</h1>
+<div class="posts" style="border-radius: 40px;">
+    <div class="recent">
+        <h2 class="post-title"><%=postTitle%></h2>
+        <h3 style="z-index: 2; color:blue">: u/<%=Name%></h3>
+    </div>
+    <hr style="z-index: 2; color: #000; position: relative; width: 95%;">
+    <div class="post-content"><%=postContent%></div>
+</div>
+<div class="button">
+    <button class="btn"><a href="/all">Read More</a></button>
+</div>
+
+<%- include("template/footer.ejs") %>

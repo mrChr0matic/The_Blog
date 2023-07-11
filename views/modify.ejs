@@ -1,0 +1,16 @@
+<%- include("template/header.ejs") %>
+    <div class="all-div" style="color: aliceblue;">
+        <% for(let i=arrays.length-1;i>=0;i--){ %> 
+            <div class="all-item">
+                <form action="/delete" method="post">
+                <label name="optionTitle"><%=arrays[i].title%>   <i class="fa-solid fa-book fonts"></i></label>
+                <button class="edit-button" type="submit" value="<%=arrays[i]._id%>" formaction="/update" name="updateOption"><i class="fa-solid fa-pen-to-square fonts"></i></button>
+                <button class="delete-button" type="submit" value="<%=arrays[i]._id%>" name="deleteOption"><i class="fa-solid fa-trash fonts"></i></button>
+                </form>
+                <hr>    
+                <div name="optionContent"><%=arrays[i].content%> </div>
+            </div>
+        <% }; %>  
+    </div>
+<%- include("template/footer.ejs")%>
+

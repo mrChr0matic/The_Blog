@@ -1,0 +1,26 @@
+<%- include("template/header.ejs")%>
+<div class="security-box"> 
+    <div class="security-div">
+        <h2 style="z-index: 2; position: relative;;">Login</h2>
+        <form action="/users" method="post" class="security-form">
+            <div class="security-input">
+                <span class="icon"></span>
+                <input type="text" name="profileName" required autocomplete="off">  
+                <label >Username</label>
+            </div>
+            <div class="security-input">
+                <span class="icon"></span>
+                <input type="text" name="profilePassword" required autocomplete="off">
+                <label >Password</label>
+            </div>
+            <div class="security-button-div">
+                <button class="security-button" type="submit">Submit</button>
+            </div>
+        </form>
+        <div style="display: flex; z-index: 2; position: relative; padding-top: 20px;">
+            <h3>New user?</h3>
+            <a href="/signup" class="create-account">create account</a>
+        </div>
+    </div>
+</div>
+<%- include("template/footer.ejs")%>       

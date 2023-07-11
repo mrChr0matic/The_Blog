@@ -1,0 +1,14 @@
+<%- include("template/header.ejs") %>
+    <div class="all-div" style="color: aliceblue;">
+        <% for(let i=arrays.length-1;i>=0;i--){ %> 
+            <div class="all-item">
+                <h3 style="color: aqua;">u/<%=arrays[i].user%>   <span style="color: gray;">posted:</span></h3>
+                <div class="all-options">
+                    <h3 ><%=arrays[i].title%> </h3>  <i class="fa-solid fa-book fonts"></i></h3>
+                </div>
+                <hr>    
+                <div><%=arrays[i].content%> </div>
+            </div>
+        <% }; %>  
+    </div>
+<%- include("template/footer.ejs")%>

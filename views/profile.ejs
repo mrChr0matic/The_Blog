@@ -1,0 +1,18 @@
+<%- include("template/header.ejs") %>
+<div class="profile-div">
+    <h1 style="color: aliceblue;">Welcome <span style="color: aqua;">u/<%=Name%></span></h1>
+    <div class="for-animations">
+        <form action="" method="post">
+            <div class="profile-items">
+                <button class="profile-buttons pb1" type="submit" formaction="/myPosts"><div class="profile-options po1">posts</div></button>
+                <button class="profile-buttons pb2" type="submit" formaction="/modify"><div class="profile-options po2">Modify</div></button>
+            </div>
+            <div class="profile-items">
+                <button class="profile-buttons pb3" type="submit" formaction="/compose"><div class="profile-options po3">Compose</div></button>
+                <button class="profile-buttons pb4" type="submit" formaction="/logout"><div class="profile-options po4">Logout</div></button>
+            </div>
+        </form>
+        
+    </div>
+</div>
+<%- include("template/footer.ejs")%>
