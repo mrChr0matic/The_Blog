@@ -3,7 +3,7 @@ const app=express();
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/TheBlog');
+mongoose.connect('mongodb+srv://abisheknair54321:D%40rk1egend@cluster0.lfz5arl.mongodb.net/TheBlog');
 
 let schema={
     user:String,
