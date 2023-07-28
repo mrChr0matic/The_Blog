@@ -3,7 +3,8 @@ const app=express();
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://abisheknair54321:D%40rk1egend@cluster0.lfz5arl.mongodb.net/TheBlog');
+const env=require("dotenv").config();
+mongoose.connect(process.env.DB_URL);
 
 let schema={
     user:String,
