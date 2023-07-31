@@ -5,9 +5,9 @@
 <ul>
   <li>Post blogs for multiple users</li>
   <li>Store user data and post data in MongoDB Atlas</li>
-  <li>Perform CRUD operations on Database</li>
+  <li>Perform CRUD operations on Database and view it in frontend</li>
 </ul>
-<br>
+<hr>
 <h2>Technologies Used</h2>
 <ul>
   <li>HTML</li>
