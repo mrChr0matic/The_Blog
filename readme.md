@@ -7,7 +7,7 @@
   <li>Store user data and post data in MongoDB Atlas</li>
   <li>Perform CRUD operations on Database and view it in frontend</li>
 </ul>
-<hr>
+
 <h2>Technologies Used</h2>
 <ul>
   <li>HTML</li>
