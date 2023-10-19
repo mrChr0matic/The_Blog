@@ -1,5 +1,4 @@
-<h1>The Blog</h1><br>
-
+<h1>The Blog</h1>
 <h3>A website that lets multiple users to post blogs.</h3>
 <h2>Features</h2>
 <ul>
