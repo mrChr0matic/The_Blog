@@ -1,6 +1,6 @@
 <h1>The Blog</h1><br>
-<h2><p>to view site <a href="https://the-blog-r1ca.onrender.com/" target="_blank" > Click Here</a></p></h2>
 
+<h3>A website that lets multiple users to post blogs.</h3>
 <h2>Features</h2>
 <ul>
   <li>Post blogs for multiple users</li>
@@ -17,3 +17,5 @@
   <li>Node JS</li>
   <li>MongoDB</li>
 </ul>
+
+<h2><p>to view site <a href="https://the-blog-r1ca.onrender.com/" target="_blank" > Click Here</a></p></h2>
